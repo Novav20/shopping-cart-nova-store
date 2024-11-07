@@ -1,0 +1,113 @@
+﻿@model IEnumerable<ShoppingCart.Entities.User>
+@using ShoppingCart.Entities;
+
+@{
+    Layout = "_CustomLayout";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <span class="m-0 font-weight-bold text-primary"><i class="fas fa-users me-1"></i> Lista de Usuarios</span>
+    </div>
+    <div class="card-body">
+        <!-- Add New User Button -->
+        <div class="mb-4">
+            <button class="btn btn-success" data-toggle="modal" data-target="#createUserModal"
+                title="Agregar Nuevo Usuario">
+                <i class="fas fa-user-plus"></i>
+            </button>
+        </div>
+        <div class="card-body">
+
+            <div class="table-responsive">
+                <!-- Render both tables and use responsive CSS classes to show/hide them -->
+                <partial name="_DesktopTable" model="Model" />
+                <partial name="_MobileTable" model="Model" />
+            </div>
+        </div>
+
+
+        <!-- Create User Modal -->
+        <div class="modal fade" id="createUserModal" tabindex="-1" role="dialog" aria-labelledby="createUserModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createUserModalLabel">Crear Nuevo Usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="@Url.Action("Create", "Users")">
+                            <div class="form-group">
+                                <label for="FirstName">Nombre</label>
+                                <input type="text" class="form-control" id="FirstName" name="FirstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="LastName">Apellido</label>
+                                <input type="text" class="form-control" id="LastName" name="LastName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input type="email" class="form-control" id="Email" name="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Contraseña</label>
+                                <input type="password" class="form-control" id="Password" name="Password" required>
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="Active" name="Active">
+                                <label class="form-check-label" for="Active">Activo</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @foreach (var user in Model)
+        {
+            <!-- Edit User Modal -->
+            <div class="modal fade" id="editUserModal-@user.Id" tabindex="-1" role="dialog"
+                aria-labelledby="editUserModalLabel-@user.Id" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editUserModalLabel-@user.Id">Editar Usuario</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="@Url.Action("Edit", "Users", new { id = user.Id })">
+                                <div class="form-group">
+                                    <label for="FirstName-@user.Id">Nombre</label>
+                                    <input type="text" class="form-control" id="FirstName-@user.Id" name="FirstName"
+                                        value="@user.FirstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="LastName-@user.Id">Apellido</label>
+                                    <input type="text" class="form-control" id="LastName-@user.Id" name="LastName"
+                                        value="@user.LastName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email-@user.Id">Email</label>
+                                    <input type="email" class="form-control" id="Email-@user.Id" name="Email"
+                                        value="@user.Email" required>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="Active-@user.Id" name="Active"
+                                    @(user.Active ? "checked" : "")>
+                                    <label class="form-check-label" for="Active-@user.Id">Activo</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

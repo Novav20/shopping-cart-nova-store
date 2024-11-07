@@ -1,0 +1,27 @@
+# Visual Studio y configuraciones de usuario
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos de compilación
+bin/
+obj/
+out/
+
+# Paquetes
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+# Configuraciones locales
+.vs/
+.DS_Store
+Thumbs.db
+
+# Archivos de publicación
+**/appsettings.Development.json

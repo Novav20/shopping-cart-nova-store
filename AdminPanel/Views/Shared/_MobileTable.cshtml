@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ShoppingCart.Entities.User>
+
+<table class="table table-bordered d-md-none" id="mobileDataTable" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Nombre Completo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td class="position-relative">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>@user.FirstName @user.LastName</span>
+                        <button class="btn btn-link btn-sm" type="button" data-toggle="collapse" data-target="#details-@user.Id" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="collapse" id="details-@user.Id">
+                        <div class="mt-3">
+                            <p><strong>ID:</strong> @user.Id</p>
+                            <p><strong>Email:</strong> @user.Email</p>
+                            <p><strong>Restablecer:</strong> 
+                                @Html.Raw(user.Reset ? "<span class='text-success'>Si</span>" : "<span class='text-danger'>No</span>")
+                            </p>
+                            <p><strong>Estado:</strong> 
+                                @Html.Raw(user.Active ? "<span class='text-success'>Activo</span>" : "<span class='text-danger'>Inactivo</span>")
+                            </p>
+                            <div class="mt-2">
+                                <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editUserModal-@user.Id">
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                                <a href="@Url.Action("Remove", "Users", new { id = user.Id })" class="btn btn-sm btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

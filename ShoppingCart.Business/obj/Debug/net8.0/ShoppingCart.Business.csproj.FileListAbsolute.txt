@@ -1,0 +1,17 @@
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Business.deps.json
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Business.dll
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Business.pdb
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Data.dll
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Entities.dll
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Data.pdb
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\bin\Debug\net8.0\ShoppingCart.Entities.pdb
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.csproj.AssemblyReference.cache
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.AssemblyInfoInputs.cache
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.AssemblyInfo.cs
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.csproj.CoreCompileInputs.cache
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\Shopping.5C1A379B.Up2Date
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.dll
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\refint\ShoppingCart.Business.dll
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ShoppingCart.Business.pdb
+C:\Users\JuanJ\Documents\NovaProjects\VSCode\CSharp\ShoppingCart\ShoppingCart.Business\obj\Debug\net8.0\ref\ShoppingCart.Business.dll
